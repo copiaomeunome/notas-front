@@ -1,0 +1,73 @@
+{
+    "versões": {
+        "node": "18",
+        "npm": "9"
+    },
+
+    "definições": {
+        "componentes": "funções que retornam HTML convertido em js: jsx",
+        "state": "variáveis dentro do react que podem ser setadas e o código todo vai reagir"
+    },
+
+    "vite": {
+        "descrição": "criador de projeto react",
+        "comandos": {
+            "criação1": "npm create vite@latest",
+            "criação2": "cd ./*nome do arquivo criado*",
+            "criação3": "npm install",
+            "rodar": "npm run dev"
+        }
+    },
+
+    "configurações iniciais": {
+        "deletar": "read.me, index.html>link rel icon, .eslintrc.cjs, src/Assets, src/app.css, ",
+        "renomear": "src/App.tsx > src/app.tsx",
+        "alterar": {
+            "src/main.tsx": "import App from './App.tsx' > import {App} from './app'",
+            "src/index.css": "apagar tudo",
+            "src/app.tsx": "apagar todas as importações e tudo que tem dentro da função App, e exportá-la ao invés do default",
+            "./package.json": "apagar tudo do eslint (do objeto scripts e do devdependencies), depois dar um npm install"
+        }
+    },
+
+    
+
+    "tailwind": {
+        "site": "https://tailwindcss.com/",
+        "descrição": "framework para padronização do css (cores tamanhos padrões etc)",
+        "comandos": {
+            "instalação1": "npm install -D tailwindcss postcss autoprefixer",
+            "instalação2": "npx tailwindcss init -p",
+            "seguir as instruções 3, 4 e 6 do site": "https://tailwindcss.com/docs/guides/vite"
+        },
+        "dica": "é bom deixar a documentação do tailwind aberta para estilizar"
+    },
+
+    "Radix UI": {
+        "site": "https://www.radix-ui.com/",
+        "descrição": "biblioteca de componentes de aplicações web",
+        "comando": "ir no site radix UI, clicar em get started>pimitives>get started>o que vc quiser instalar>instalation (usei o dialog)"
+    },
+
+    "Date fns": {
+        "descrição": "biblioteca para lidar com datas no js",
+        "comando": "npm i date-fns"
+    },
+
+    "Lucide react": {
+        "descrição": "pacote de icones do react",
+        "comando": "npm i lucide-react"
+    },
+
+    "Sonner": {
+        "site": "https://sonner.emilkowal.ski/",
+        "descrição": "biblioteca de toast (pop up dizendo que algo deu certo)",
+        "comando": "npm install sonner"
+    },
+
+    "axios": {
+        "descrição": "biblioteca para requisição com a api",
+        "comando": "npm install axios"
+    }
+
+}
