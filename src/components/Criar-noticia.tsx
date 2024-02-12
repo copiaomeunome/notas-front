@@ -45,7 +45,7 @@ export function CriarNoticia(criarNoticiaProps:CriarNoticiaProps){
             </Dialog.Trigger>
             <Dialog.Portal>
                 <Dialog.Overlay className="inset-0 fixed bg-black/50"/>
-                <Dialog.Content className="fixed overflow-hidden -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-max-[60vh] max-w-[640px] w-full bg-emerald-500 rounded-md flex flex-col outline-none">
+                <Dialog.Content className="fixed inset-0 md:inset-auto overflow-hidden md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 md:h-max-[60vh] md:max-w-[640px] w-full bg-emerald-500 md:rounded-md flex flex-col outline-none">
                     <Dialog.Close className="absolute right-0 top-0 bg-transparent hover:bg-red-600 p-1.5 hover:text-slate-100">
                         <X className="size-5"/>
                     </Dialog.Close>

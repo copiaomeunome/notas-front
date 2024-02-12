@@ -8,12 +8,13 @@ interface NoticiaProps{
         id:number
         titulo:string
         descricao:string
-    }
+    },
+    deletarNoticiaFunc:(id:number)=>void
     
 }
 
 
-export function Noticia({noticiaProps}: NoticiaProps){
+export function Noticia({noticiaProps,deletarNoticiaFunc}: NoticiaProps){
 
     function handleDeleteNote(){
         axios.delete(`https://nodedeploy-api-test.onrender.com/excluir/${noticiaProps.id}`)
@@ -22,9 +23,8 @@ export function Noticia({noticiaProps}: NoticiaProps){
         }).catch(error => {
             console.error(error);
         });
-        toast.success('Nota deletada com sucesso!!', {
-            description: 'Atualize a página para visualizar',
-        })
+        toast.success('Nota deletada com sucesso!')
+        deletarNoticiaFunc(noticiaProps.id)
         
     }
 
@@ -41,11 +41,11 @@ export function Noticia({noticiaProps}: NoticiaProps){
             </Dialog.Trigger>
             <Dialog.Portal>
                 <Dialog.Overlay className="inset-0 fixed bg-black/50"/>
-                <Dialog.Content className="fixed -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-max-[60vh] max-w-[640px] w-full h-[60vh] rounded-md flex flex-col outline-none">
+                <Dialog.Content className="fixed inset-0 md:inset-auto md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 md:h-max-[60vh] md:max-w-[640px] w-full md:h-[60vh] md:rounded-md flex flex-col outline-none">
                     <Dialog.Close className="rounded absolute right-0 top-0 bg-transparent hover:bg-red-600 p-1.5 hover:text-slate-100">
                         <X className="size-5"/>
                     </Dialog.Close>
-                    <div className="w-full h-full text-center flex flex-1 flex-col gap-3 p-5 overflow-hidden bg-emerald-500  outline-none rounded">
+                    <div className="w-full h-full text-center flex flex-1 flex-col gap-3 p-5 overflow-hidden bg-emerald-500  outline-none md:rounded">
                         <h1 className="text-2xl ">
                             {noticiaProps.titulo}
                         </h1>
